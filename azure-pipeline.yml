@@ -1,0 +1,16 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: Build
+  steps:
+  - script: echo 'Building WordPress Multisite'
+    displayName: 'Build WordPress'
+
+- job: Deploy
+  steps:
+  - script: echo 'Deploying to Azure'
+    displayName: 'Deploy WordPress'
